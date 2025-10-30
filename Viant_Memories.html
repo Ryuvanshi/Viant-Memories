@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memories</title>
+  <link rel="stylesheet" href="Assets/CSS/style.css">
+  
+  <style>
+    body {
+      background: linear-gradient(180deg, #f3f7ff, #fff);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+      background: #e6ebff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    header h1 {
+      margin: 0;
+      color: #4b5fc1;
+      animation: fadeInDown 0.8s ease;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #4b5fc1;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #2f3a91;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    h2 {
+      color: #4b5fc1;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .memory-item {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s forwards ease-out;
+    }
+
+    .memory-item img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .memory-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 5px;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: #e6ebff;
+      margin-top: 40px;
+      color: #4b5fc1;
+      font-weight: 500;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Modal image styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      border-radius: 12px;
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: #fff;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #caption {
+      text-align: center;
+      color: #ccc;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Memories 💭</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Viant_Memories.html">Memories</a>
+      <a href="messages.html">Messages</a>
+      <a href="Gift.html">Gift</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Your Memories</h2>
+    <p>Every moment of you that I can capture. Click the photo to zoom it.</p>
+    <div class="gallery">
+  <div class="memory-item">
+    <img src="Assets/images/23_Januari_2025.png" alt="23 Januari 2025 (09:52)">
+    <p class="caption">A couple weeks after our first met</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/5_Februari_2025.png" alt="5 Februari 2025 (06:06)">
+    <p class="caption">Talking with Ronsdon</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/6_Februari_2025.png" alt="6 Februari 2025 (10:27)">
+    <p class="caption">Chilling and chatting in the JP Shrine's cave</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/10_Feb_2025.jpg" alt="10 Februari 2025 (09:21)">
+    <p class="caption">When you told me that your neighbor just dump their construction sand near your house and broke something</p>
+  </div>
+
+<div class="memory-item">
+    <img src="Assets/images/13_Februari_2025.png" alt="13 Februari 2025 (13:58)">
+    <p class="caption">The time when you crash but the pose is very cute</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/18_Februari_2025.png" alt="18 Februari 2025 (09:45)">
+    <p class="caption">After dancing to the Koplo song, you ask me to take a photo</p>
+  </div>
+
+<div class="memory-item">
+    <img src="Assets/images/20_Februari_2025.png" alt="20 Februari 2025 (16:18)">
+    <p class="caption">After playing Truth or Dare with kaminokudo, haru and other</p>
+  </div>
+
+<div class="memory-item">
+    <img src="Assets/images/23_Februari_2025.jpg" alt="23 Februari 2025 (09:03)">
+    <p class="caption">When there is a random number send you a chat and you replied with a pig sticker</p>
+  </div>
+
+<div class="memory-item">
+    <img src="Assets/images/25_Februari_2025.png" alt="25 Februari 2025 (08:58)">
+    <p class="caption">Still sleeping</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/25_Februari_2025_2.png" alt="25 Februari 2025 (22:00)">
+    <p class="caption">When kudo ask you to do MMD with him and I tease you www</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/4_Maret_2025.png" alt="4 Maret 2025 (16:06)">
+    <p class="caption">When you're hiding from kudo under the pond in the Zelda's World</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/9_Maret_2025.png" alt="9 Maret 2025 (00:48)">
+    <p class="caption">That time when you sounds not well, so I ask if you're sick and you go to sleep after that</p>
+  </div>
+
+<div class="memory-item">
+    <img src="Assets/images/19_Maret_2025.jpg" alt="19 Maret 2025 (15:55)">
+    <p class="caption">That time when your sis's bf come to your house and they start watching MLP while cooking</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/26_Maret_2025.jpg" alt="26 Maret 2025 (11:58)">
+    <p class="caption">When you show me your monthly instant noodle groceries at Yogya Junction</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/28_Maret_2025.jpg" alt="28 Maret 2025 (13:42)">
+    <p class="caption">When you show me your handwriting from your old notebook</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/31_Maret_2025.jpg" alt="31 Maret 2025 (11:22)">
+    <p class="caption">That time when you show me the body scrub's variant that you bought</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/7_April_2025.png" alt="7 April 2025 (08:10)">
+    <p class="caption">When you're playing Know Your Friends Better with your overseas friend and you got this question www</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/7_April_2025_2.png" alt="7 April 2025 (20:43)">
+    <p class="caption">When Ruchian update your avatar and you forgot that this is the afk animation and then you went afk www</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/15_April_2025.png" alt="15 April 2025 (03:38)">
+   <p class="caption">That time when you drinking and ask me and lakshan to go to private world, turn out you're also drinking medicine at that time</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/18_April_2025.jpg" alt="18 April 2025 (16:11)">   
+    <p class="caption">When you show me the vibe black tea looks like </p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/20_April_2025.png" alt="20 April 2025 (08:01)">
+    <p class="caption">After you gave neto the VRC+ so he can move his hands </p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/20_April_2025.jpg" alt="20 April 2025 (14:05)">
+    <p class="caption">When there is a random gecko/lizard got inside your house www </p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/22_April_2025.png" alt="22 April 2025 (15:23)">
+    <p class="caption">When you went AFK cause your mom ask you to do something</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/27_April_2025.png" alt="27 April 2025 (15:48)">
+    <p class="caption">When we watch that fcked up romcom anime</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/28_April_2025.png" alt="28 April 2025 (06:38) ">
+    <p class="caption">That time when the JP Shrine became spring and I take a pic of the prettiest girl</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/30_April_2025_2.jpg" alt="30 April 2025 (05:05)">
+    <p class="caption">When your cat just staring at the front door even tho there is nothing out there</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/30_April_2025.jpg" alt="30 April 2025 (07:55)">
+    <p class="caption">When nero just standing still in front of her tent</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/3_Mei_2025.jpg" alt="3 Mei 2025 (07:43)">
+    <p class="caption">When you show me what character that you got on Arknights</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/12_Mei_2025.png" alt="12 Mei 2025 (09:26)">
+    <p class="caption">When you're AFK in the Silent Hill map because someone vent and trauma dumping to you for 12 hours straight</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/16_Mei_2025.jpg" alt="16 Mei 2025 (17:48)">
+    <p class="caption">When you're on the way to the hotel and you capture the photo of the sunset</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/18_Mei_2025.jpg" alt="18 Mei 2025 (17:14)">
+    <p class="caption">When you accompany your Mom to go to the Manasik</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/18_Mei_2025_2.jpg" alt="18 Mei 2025 (17:19)">
+    <p class="caption">Inside the hall where the Manasik held on with your mom</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/20_Mei_2025.jpg" alt="20 Mei 2025 (10:04)">
+    <p class="caption">Picaso just staring at your soul after you got back from the Manasik</p>
+  </div>
+
+<div class="memory-item">
+    <img src="Assets/images/15_Juni_2025_2.jpg" alt="15 Juni 2025 (07:42)">
+    <p class="caption">When you almost miss your train</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/15_Juni_2025.jpg" alt="15 Juni 2025 (08:35)">
+    <p class="caption">"Jajan wkwk" that's the thing you told me wwww</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/16_Juni_2025.jpg" alt="16 Juni 2025 (17:56)">
+    <p class="caption">When you capture the picture of sunset on your way home</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/21_Juni_2025.png" alt="21 Juni 2025 (18:43)">
+    <p class="caption">List of some anime that you've watched from 2006 - 2024</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/3_Juli_2025.png" alt="3 Juli 2025 (14:56)">
+    <p class="caption">That day when Yamako pat your head www</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/15_Juli_2025.jpg" alt="15 Juli 2025 (11:35)">
+    <p class="caption">That time when you don't know what to eat ask me, then you buy some dimsum. Damn, I still remember how happy you are when that dimsum arrive</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/15_Juli_2025.png" alt="15 Juli 2025 (18:17)">
+    <p class="caption">That time when we're at Korn's avatar world. Look how cute you are ( ˶o˶˶o˶) !!</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/16_Juli_2025.png" alt="16 Juli 2025 (16:46)">
+    <p class="caption">This confusing ahh puzzle world, we got a headache playing this game www</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/18_Juli_2025.jpg" alt="18 Juli 2025 (10:00)">
+    <p class="caption">That time when one of your mom student, gave your mom a rose and she offer you. "You want to eat it?"</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/21_Juli_2025.png" alt="21 Juli 2025 (18:10)">
+    <p class="caption">That time when you're AFK at Re:Ocean View before Koi's told you his story.</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/26_Juli_2025.png" alt="26 Juli 2025 (00:10)">
+    <p class="caption">That time when you're too tired because of the umamusume fun race www</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/28_Juli_2025.png" alt="28 Juli 2025 (17:04)">
+    <p class="caption">That time when you got crashed at the school world, but damn you look so pretty :3</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/29_Juli_2025.jpg" alt="29 Juli 2025 (14:50)">
+    <p class="caption">When you want to make lunch and Inco just doing some random stuff www</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/1_Agustus_2025.png" alt="1 Agustus 2025 (16:33)">
+    <p class="caption">The prettiest girl that I've ever met ♡</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/1_Agustus_2025_2.png" alt="1 Agustus 2025 (16:34)">
+    <p class="caption">Another photo in Japan Shrine before you go cause of your cousin coming</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/3_Agustus_2025.jpg" alt="3 Agustus 2025 (21:48)">
+    <p class="caption">That time when you get a pretty clean hotel room. Pretty good luck I guess</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/4_Agustus_2025.jpg" alt="4 Agustus 2025 (20:18)">
+    <p class="caption">Not that good luck maybe, you got 2 left sandals www</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/5_Agustus_2025.jpg" alt="5 Agustus 2025 (17:39)">
+    <p class="caption">"Please remind me if it's 17:30 I wanna take a pic of sunset" but sadly, God says no</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/5_Agustus_2025.png" alt="5 Agustus 2025 (19:41)">
+    <p class="caption">That time when you do a smoking pose www, you looks cool</p>
+  </div>
+
+    <div class="memory-item">
+    <img src="Assets/images/8_Agustus_2025.jpg" alt="8 Agustus 2025 (10:39)">
+    <p class="caption">I guess that hotel room wasn't that clean, you got sick after that and your mom bought you an apple pie</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/14_Agustus_2025.jpg" alt="14 Agustus 2025 (14:59)">
+    <p class="caption">That time when you bought a cute phone case for only 15k (include delivery fee)</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/5_September_2025.png" alt="5 September 2025 (12:05)">
+    <p class="caption">Mano Po www</p>
+  </div>
+
+  <div class="memory-item">
+    <img src="Assets/images/7 September 2025.png" alt="7 September 2025 (23:08)">
+    <p class="caption">When you play too many suika game and fell asleep on MMD world. (You look so gorgeous ♡)</p>
+  </div>
+</div>
+  </main>
+
+ <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+  </div>
+
+  <footer>
+    <p>Made by Hiro</p>
+  </footer>
+
+  <audio autoplay loop>
+    <source src="Assets/audio/Memories.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // Set background music volume
+    const bgm = document.querySelector('audio');
+    bgm.volume = 0.15;
+
+    // Modal image preview
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    document.querySelectorAll(".memory-item img").forEach((img) => {
+      img.addEventListener("click", function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      });
+    });
+
+    closeBtn.onclick = () => (modal.style.display = "none");
+
+    // Animation delay per image
+    document.addEventListener("DOMContentLoaded", () => {
+      const items = document.querySelectorAll(".memory-item");
+      items.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.15 + 0.3}s`;
+      });
+    });
+  </script>
+</body>
+</html>

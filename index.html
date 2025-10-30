@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Memories</title>
+  <link rel="stylesheet" href="Assets/CSS/style.css">
+</head>
+<body>
+  <header>
+    <h1>Memory Book</h1>
+  </header>
+
+<main>
+  <section class="intro">
+    <h2>Welcome</h2>
+    <p>This is a little space I made just for you, filled with your memories and some messages from me to you.</p>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <a href="Viant_Memories.html">
+        <img src="Assets/images/memories.jpg" alt="Memories">
+        <h3>Memories</h3>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="messages.html">
+        <img src="Assets/images/messages.jpg" alt="Messages">
+        <h3>Messages</h3>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="Gift.html">
+        <img src="Assets/images/gift.jpg" alt="Gift">
+        <h3>Gift</h3>
+      </a>
+    </div>
+  </section>
+</main>
+
+  <footer>
+    <p>Made by Hiro</p>
+  </footer>
+
+<audio id="bg-music" autoplay loop muted>
+  <source src="Assets/Audio/Home.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById('bg-music');
+
+  // Unmute after short delay to bypass Chrome autoplay policy
+  setTimeout(() => {
+    music.muted = false;
+    music.volume = 0; // start silent
+
+    const fadeIn = setInterval(() => {
+      if (music.volume < 0.15) {
+        music.volume += 0.01; // fade in smoothly
+      } else {
+        clearInterval(fadeIn);
+        music.volume = 0.15; // cap at 0.15
+      }
+    }, 200);
+  }, 800);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages</title>
+  <link rel="stylesheet" href="Assets/CSS/style.css">
+  <style>
+    .messages-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .message-card {
+      background: linear-gradient(145deg, #ffffff, #f9f7fb);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      position: relative;
+      transform: translateY(30px);
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    /* Sequential animation delay for each card */
+    .message-card:nth-child(1) { animation-delay: 0.2s; }
+    .message-card:nth-child(2) { animation-delay: 0.4s; }
+    .message-card:nth-child(3) { animation-delay: 0.6s; }
+    .message-card:nth-child(4) { animation-delay: 0.8s; }
+
+    @keyframes fadeUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .message-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(107, 91, 149, 0.2);
+      transition: all 0.4s ease;
+    }
+
+    .message-date {
+      font-size: 0.8rem;
+      color: #aaa;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+
+    .message-text {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.8;
+      white-space: pre-line;
+      margin-top: 10px;
+    }
+
+    .signature {
+      text-align: right;
+      font-style: italic;
+      margin-top: 15px;
+      color: #6b5b95;
+    }
+
+    /* Floating gentle animation effect (background glow) */
+    body {
+      background: linear-gradient(180deg, #faf7f5, #f3ecf9);
+      background-attachment: fixed;
+      animation: softFade 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes softFade {
+      from { background-position: 0 0; }
+      to { background-position: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Letters to You 💌</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Viant_Memories.html">Memories</a>
+      <a href="messages.html">Messages</a>
+      <a href="Gift.html">Gift</a>
+    </nav>
+  </header>
+
+  <main>
+<section class="message-intro">
+  <h2>Random things that I wanted to tell you...</h2>
+  <p>and some messages that I'm afraid to send it to you 💌</p>
+</section>
+    <div class="messages-container">
+     
+      <div class="message-card">
+        <div class="message-date">March 23rd 2025</div>
+        <div class="message-text">
+        I changed my nickname from RyuzakiHiro to Ryuvanshi because I wanted to include the name of someone special to me, you (ViANt) in my name :3
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+      <div class="message-card">
+        <div class="message-date">May 14th 2025</div>
+        <div class="message-text">
+        Today you told me about your story, why you started drinking alcohol. Honestly, it made my heart ache. You started because of "him", and it’s hurting your body. I really can’t bear it… please love your body more, okay? I don’t want you to get sick or hurt because of that guy. Promise me to stop drinking or at least, if you ever want to, call me. So you won’t be ruining yourself alone :’)
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+<div class="message-card">
+        <div class="message-date"></div>
+        <div class="message-text">
+          She said lots of ppl treat her not like a girl but rather like a boy... (Damn, I really want to wrap her in warmth, I'm gonna say how cute and beautiful she is. She's not just an ordinary girl she's far more special than that.)
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+<div class="message-card">
+        <div class="message-date"></div>
+        <div class="message-text">
+          I'm trying to buy some present for her birthday but she said "Don't do it if you're wasting a money because you still need it. But if you want to give me something just give something that's not that important and not gonna spend some cash like drawing or something else."
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+      <div class="message-card">
+        <div class="message-date"></div>
+        <div class="message-text">
+          Sometime she feels like she's failed in life... but to me she's someone who gave her all and that's what make her powerful not a failure.
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+      <div class="message-card">
+        <div class="message-date"></div>
+        <div class="message-text">
+          Damn... I really love her, she mean so much to me. I don't even think if I can measure it. You mean so much more than I could ever explain. You're not just someone I care about you're someone who's craved a space in my heart without even trying. When I hear your voice, even on your worst days, something in me softens. When you're quiet, I miss you more than I should and sometime even overthinking. When you're hurt, I feel it in places I didn't even know could ache. You've become the light I look for, even when everything else feels heavy. You've taught me what it means to love without expecting anything in return. Just loving someone because they're really worth that much to you and to me, you are. You're worth every silent moment of waiting, every heartbeat full of hope, and every whispered wish tht one day, you'll find peace, happiness and love, even if it's not with me...
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+      <div class="message-card">
+        <div class="message-date"></div>
+        <div class="message-text">
+          You don't need to do anything to be special. You already are. Just being you, just by existing. Your presence brings warmth, your laughter feels like music and every time I hear it, it makes me happy. Your kindness, even when you doubt yourself, is something rare and beautiful. If I could... I'd take away every ounce of pain you've carried. I'd fight every storm beside you and when you're tired, I'd be the quiet place you can rest in. I don't know what the future hold, or what choices you'll make. But I do know this: I'll always be here. Because loving you, even from afar, has been the most honest thing I've ever done.
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+            <div class="message-card">
+        <div class="message-date"></div>
+        <div class="message-text">
+          Damn, she really want to became a man, should I be gay?
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+      <div class="message-card">
+        <div class="message-date"> August 23rd 2025</div>
+        <div class="message-text">
+        I’m not sure if I'll send it to you or not, but I still want to say it anyway.
+I’ve noticed lately that you’ve been keeping some distance from me, and honestly... I understand. I know you said it’s okay about what happened before and that I’ve already apologized, but deep down, I realize that my mistake was serious. You’ve already got so much going on work, stress, and everything else that might be overwhelming and I probably added to that. I might have made you upset, and if you needed space because of that, I completely respect it. You have every right to take time for yourself. I’ve decided to take a short break from the internet for a while. I want to learn from my mistakes and work on myself especially my overthinking, because I can see how it keeps ruining things, and I don’t want it to hurt anyone anymore, especially you. When I come back, I just hope… maybe we can go back to how we used to be talking, laughing at random things, watching movies, and just being comfortable around each other again. You’re my best friend, Vi, and the thought of losing that connection really scares me. I also want to apologize if I’ve ever made you uncomfortable by talking too much about my feelings or if it seemed like I was forcing them onto you. That was never my intention. I just care about you deeply, maybe a little too much sometimes. I’m not expecting you to reply I just wanted to leave this message. I hope that when you wake up, your morning starts softly, and the day greets you with calmness and warmth. When you go to bed, I hope the night is kind to you, wrapping you in peace and comfort, and that you have sweet dreams. Please don’t stay up too late, don’t skip your meals, drink water, and don’t push yourself too hard, okay? Take care of yourself, Vi. I’ll be going for now… see you around.
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+      <div class="message-card">
+        <div class="message-date"> September 10th 2025</div>
+        <div class="message-text">
+        I don’t even know where to start. It's only been a day, but the silence feels heavier than I thought it would. It’s strange not seeing your name pop up, not hearing your voice, not getting to say something small, dumb and a bit gay just to make you smile. Every minute feels slower. I keep opening Discord, scrolling through our old messages, reading the same words over and over again as if maybe you’d say something new this time. I know I crossed a line. I know I made you uncomfortable, that I got too close when you needed space. I hate myself for that, for letting my feelings turn into something that hurt you instead of made you feel safe. I keep wishing I could go back, to stop myself before I ruined what we had. I miss you already. Not just because I loved talking to you, but because you were my calm place. You made my world softer, warmer, even when everything else felt cold. I hope wherever you are right now, you’re okay. I hope you ate something good today. I hope you’re resting. You probably don’t want to hear from me but I still find myself whispering your name anyway, quietly, like maybe you could somehow feel it.
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+            <div class="message-card">
+        <div class="message-date"> September 16th 2025</div>
+        <div class="message-text">
+          It’s been a week since we last talked. The silence feels heavy sometimes, but I keep reminding myself that this space is what you need. I’ve been trying to stay busy, watching anime, streaming even playing other games.  But there are small things that keep bringing you back to my mind. Are you doing okay? Are you sleeping well? I know you push yourself hard when things get stressful. I hope you’re taking care of yourself, Viant. Even if I’m not there to remind you, I still care deeply.
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+<div class="message-card">
+        <div class="message-date"> September 23rd 2025</div>
+        <div class="message-text">
+          It's been 2 weeks,  I’ve started writing small things I want to tell you things I would’ve said if we were still talking. Like how I found an old photo of our time in VRChat that made me smile. I miss your presence not just as someone I love, but as someone who made ordinary days feel lighter. I’m learning to be patient, to quiet the urge to reach out. I want to become someone who brings you peace, not pressure. I still pray that you’re doing fine… that you’re surrounded by warmth, not pain...
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+            <div class="message-card">
+        <div class="message-date"> September 30th 2025</div>
+        <div class="message-text">
+          It’s been three weeks. Time moves strangely when your heart still lingers somewhere else. The guilt hasn’t faded it’s quieter now, but it still sits behind every thought. I wonder if you’re sleeping well, or if you’ve been eating properly lately. You always tend to forget when you’re busy. I keep thinking, if I had just paused for one second that day, maybe things wouldn’t be like this. But I can’t change it anymore, I can only change myself. So, I’ve been trying  small things, little habits, learning how to listen more and talk less. I just hope, someday, you’ll see that I really meant it when I said I’d be better.
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+            <div class="message-card">
+        <div class="message-date"> October 8th 2025</div>
+        <div class="message-text">
+          It's been 4 weeks... There are moments when I almost message you. Just a small “how are you?” or “did you eat today?” But I stop myself, because I know what you need most right now isn’t my words, it’s peace. Still, I can’t help but care. Every time I see something that reminds me of you a song, a game, even an anime it makes my chest tighten. I keep learning how to love without needing anything back. Maybe that’s what real love is… wanting someone to be okay, even if you’re not a part of their okay anymore...
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+            <div class="message-card">
+        <div class="message-date"> October 14th 2025</div>
+        <div class="message-text">
+          Hey Viant, I know it's been 5 weeks since we last talk... I don’t even know what I was thinking last night. I was drunk, but not drunk enough to forget how much I missed you. I know I shouldn’t have messaged you I told myself I’d give you space, that I’d respect your distance… but the moment the alcohol hit, all those walls just fell apart. It wasn’t an excuse, I know. I just wanted to feel close to you again, even if it was just for a second. After I sent that message, I kept staring at the screen, half hoping you’d reply, half terrified you would. I felt like I’d ruined everything all over again. Maybe I did. I could almost hear your voice in my head quiet, distant, tired of me crossing that line again. I’m sorry, Viant. I keep saying that, don’t I? But I don’t know what else to do with all this guilt sitting in my chest. I miss talking to you, I miss knowing how your day was, if you’ve eaten, if work’s been kind to you lately. I wonder if you’ve been sleeping enough, or if you’ve been pushing yourself again like you always do. Meanwhile, I’ve been trying to focus on things college, little hobbies, anything that can keep my mind from drifting back to you. But it never lasts long. You still find a way to linger in the quiet moments… in songs, in places, in memories I didn’t realize I’d attached to you. I wish I could’ve been someone who made you feel safe instead of overwhelmed. Maybe someday, when things don’t feel as heavy between us, you’ll understand that everything I did  even the stupid parts came from how much I cared. Goodnight, Viant. I hope wherever you are right now, the night’s a little gentle to you.
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+            <div class="message-card">
+        <div class="message-date"> October 21st 2025</div>
+        <div class="message-text">It's been 6 weeks, the nights have grown quieter, but my thoughts still wander to you. Sometimes I wonder if you’ve smiled today, or if something made your day a little lighter. I’ve been working on myself, one step at a time. I’ve learned that guilt can destroy, but it can also guide and I want mine to guide me toward becoming the kind of person who'll never hurts you like that again. I just hope that when you think of me, it doesn’t ache as much as it used to.
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+            <div class="message-card">
+        <div class="message-date"> October 30th 2025</div>
+        <div class="message-text">
+          Hey Viant… 7 weeks has passed. I wish I could say I’ve been doing better, but truthfully… the guilt still lingers. Every time I start to feel okay, it creeps back in that memory of how I hurt you. It’s like a shadow that follows me everywhere. I keep thinking about how easily I could’ve avoided it, how just one moment of calm could’ve changed everything. I don’t know if you’ve been doing fine, but I hope you are. I hope your days have been kinder lately that you’ve had time to rest, to laugh, to breathe without any weight in your chest. I really mean it. You deserve peace, Viant. Even if it’s peace without me in it. I’ve been trying to focus on small things… forcing myself to eat breakfast, playing games just to keep my mind quiet. But you still find your way into everything in the quiet of the night, in a random song, in my dreams. It’s always you. Sometimes I wonder if you still think of me, or if I’ve become just another mistake in your past. I wouldn’t blame you either way. But if you do remember me, I hope it’s not with anger  I hope it’s with just a bit of softness. I’m still sorry for everything. I still wish I could go back and protect what we had instead of breaking it. Please… take care of yourself. I’ll keep hoping that you’re okay, even if I’ll never know for sure.
+        </div>
+        <div class="signature">— Hiro</div>
+      </div>
+
+      <div class="message-card">
+        <div class="message-date"> October 31st 2025</div>
+        <div class="message-text">
+          I never meant to fall this way
+into the warmth of your words,
+the laughter between our pauses,
+the calm that felt like home.
+
+You were light in quiet colors,
+but strong enough
+to carry the kind of kindness
+that makes broken hearts believe again.
+
+You listened when the world didn’t,
+you smiled when you could’ve turned away.
+And somehow, without a face, without a name,
+you became the safest place I’ve ever known.
+
+I still remember those nights
+talking about dreams,
+about stories and silly things,
+watching anime until the world felt smaller,
+until it was just us,
+floating in pixels and quiet laughter.
+
+I miss that
+the easy way you made everything feel light,
+how your presence brushed away
+the noise inside my chest.
+
+I still hope, someday,
+we’ll find our way back
+not to what we were,
+but to that warmth,
+that simple joy
+of just being there together.
+
+Maybe we’ll laugh again,
+about nothing and everything,
+like the stars forgot to count the days between us.
+
+You’re still the kindest soul I’ve met,
+the one who showed me
+that love doesn’t always need touch
+to feel real.
+
+And even if the world keeps us apart,
+a part of me will always be there
+in the silence between your breaths,
+in the echoes of the things we used to say,
+hoping… quietly,
+that someday,
+you’ll think of me
+and smile again.
+        </div>
+        <div class="signature">Sincerely, I love you. -Hiro</div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Made by Hiro</p>
+  </footer>
+
+  <audio id="bg-music" autoplay loop muted>
+  <source src="Assets/Audio/Message.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById('bg-music');
+
+  // Unmute after short delay to bypass Chrome autoplay policy
+  setTimeout(() => {
+    music.muted = false;
+    music.volume = 0; // start silent
+
+    const fadeIn = setInterval(() => {
+      if (music.volume < 0.15) {
+        music.volume += 0.01; // fade in smoothly
+      } else {
+        clearInterval(fadeIn);
+        music.volume = 0.15; // cap at 0.15
+      }
+    }, 200);
+  }, 800);
+</script>
+
+</body>
+</html>

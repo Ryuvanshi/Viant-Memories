@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Flower Gift</title>
+  <link rel="stylesheet" href="Assets/CSS/style.css">
+</head>
+<body>
+  <header>
+    <h1>Virtual Flower Gift</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Viant_Memories.html">Memories</a>
+      <a href="messages.html">Messages</a>
+      <a href="Gift.html">Gift</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="flower-section">
+      <h2>For You 🌸</h2>
+      <p>Even if I can’t hand it to you in person, I still wanted to give you something beautiful, a symbol of sincerity, apology and gratitude.</p>
+
+      <div class="flower-container">
+  <p class="click-note">💙 Click the flower to reveal a message 💙</p>
+  <img src="Assets/images/blue_hydrangea.jpg" alt="Blue Hydrangea" class="flower-image" id="flower">
+  <p class="flower-meaning">Blue Hydrangea — I remember that blue hydrangeas are your favorite calm, gentle, and quietly beautiful, just like you. Even if I can’t give you the real thing, I wanted to send you this a small piece of peace and sincerity.</p>
+</div>
+
+      <div class="hidden-message" id="hiddenMessage">
+        <p>Just like this flower, you’ve brought calm and color into my world.
+You might not realize it, but every little thing you do makes life feel softer, warmer, and a little more meaningful.
+I’m truly grateful for every smile, every moment, and every memory you’ve shared with me.
+If my presence ever made things heavy, I’m sorry, it was never my intention.
+All I ever wanted was for you to feel the peace and warmth you’ve given me.
+Thank you, truly, for being you the kindest person I’ve ever met.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with care by Hiro</p>
+  </footer>
+
+<audio id="bg-music" autoplay loop muted>
+  <source src="Assets/Audio/Gift.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById('bg-music');
+
+  // Unmute after short delay to bypass Chrome autoplay policy
+  setTimeout(() => {
+    music.muted = false;
+    music.volume = 0; // start silent
+
+    const fadeIn = setInterval(() => {
+      if (music.volume < 0.15) {
+        music.volume += 0.01; // fade in smoothly
+      } else {
+        clearInterval(fadeIn);
+        music.volume = 0.15; // cap at 0.15
+      }
+    }, 200);
+  }, 800);
+</script>
+
+  <script src="Assets/JS/flower.js"></script>
+</body>
+</html>
